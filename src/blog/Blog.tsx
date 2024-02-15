@@ -21,7 +21,7 @@ const sections = [
   { title: 'Treino', url: '#' },
   { title: 'Músicas', url: '#' },
   { title: 'Projetos de tecnologia', url: '#' },
-  // { title: 'Politics', url: '#' },
+  { title: 'Grupo de Danças', url: '#' },
   // { title: 'Opinion', url: '#' },
   // { title: 'Science', url: '#' },
   // { title: 'Health', url: '#' },
