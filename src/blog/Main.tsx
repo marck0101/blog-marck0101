@@ -1,7 +1,7 @@
-import * as React from 'react'
+// import * as React from 'react'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
-import Divider from '@mui/material/Divider'
+// import Divider from '@mui/material/Divider'
 import Markdown from 'markdown-to-jsx'
 // import Markdown from './'
 
