@@ -29,7 +29,7 @@ const mainFeaturedPost = {
     'Aqui tenho um diario de como está minha dieta e um poucos dos meus treinos',
   image: Capa,
   imageText: 'main image description',
-  // linkText: 'Continue reading…',
+  linkText: 'Continue reading…',
 }
 
 const featuredPosts = [

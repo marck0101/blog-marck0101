@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Blog from '../blog/Blog'
-import Dieta from '../pages/Dieta'
-import Treino from '../pages/Treino'
-import Music from '../pages/Musicas'
-import Tech from '../pages/Tech'
-import Dancas from '../pages/Dancas'
+import Blog from './blog/Blog'
+import Dieta from './pages/Dieta'
+import Treino from './pages/Treino'
+import Music from './pages/Musicas'
+import Tech from './pages/Tech'
+import Dancas from './pages/Dancas'
+
 const RoutesApp = () => {
   return (
     <BrowserRouter>
