@@ -1,8 +1,9 @@
 import * as React from 'react'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import Link from '@mui/material/Link'
+// import Link from '@mui/material/Link'
 import { Button } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 interface HeaderProps {
   sections: ReadonlyArray<{
@@ -14,6 +15,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   const { sections, title } = props
+  const navigate = useNavigate()
 
   return (
     <React.Fragment>
@@ -28,9 +30,6 @@ export default function Header(props: HeaderProps) {
         >
           {title}
         </Typography>
-        <Button color="inherit" size="small">
-          Botão Exemplo
-        </Button>
       </Toolbar>
       <Toolbar
         component="nav"
@@ -38,16 +37,20 @@ export default function Header(props: HeaderProps) {
         sx={{ justifyContent: 'space-between', overflowX: 'auto' }}
       >
         {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            {section.title}
-          </Link>
+          <>
+            {/* @ts-ignore */}
+            <Button
+              color="inherit"
+              noWrap
+              key={section.title}
+              // variant="body2"
+              onClick={() => navigate(`${section.url}`)}
+              // href={section.url}
+              sx={{ p: 1, flexShrink: 0 }}
+            >
+              {section.title}
+            </Button>
+          </>
         ))}
       </Toolbar>
     </React.Fragment>
