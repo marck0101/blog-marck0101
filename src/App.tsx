@@ -1,10 +1,12 @@
 import './App.css'
-import Blog from './blog/Blog'
+import RoutesApp from './routers'
 
 function App() {
   return (
     <>
-      <Blog />
+      <div className="App">
+        <RoutesApp />
+      </div>
     </>
   )
 }

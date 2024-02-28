@@ -4,6 +4,8 @@ import Card from '@mui/material/Card'
 import CardActionArea from '@mui/material/CardActionArea'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
+import { Button } from '@mui/material'
+import { useNavigate } from 'react-router-dom'
 
 interface FeaturedPostProps {
   post: {
@@ -12,15 +14,25 @@ interface FeaturedPostProps {
     image: string
     imageLabel: string
     title: string
+    link: string
   }
 }
 
 export default function FeaturedPost(props: FeaturedPostProps) {
   const { post } = props
 
+  const navigate = useNavigate()
+  const url = window.location.href.split('/')[2]
+  const navegacao = () => {
+    console.log('url', url)
+    console.log('${post.link}', `${url}${post.link}`)
+
+    navigate(`${post.link}`)
+  }
+
   return (
     <Grid item xs={12} md={6}>
-      <CardActionArea component="a" href="#">
+      <CardActionArea component="a" /*href="#"*/>
         <Card sx={{ display: 'flex' }}>
           <CardContent sx={{ flex: 1 }}>
             <Typography component="h2" variant="h5">
@@ -33,7 +45,9 @@ export default function FeaturedPost(props: FeaturedPostProps) {
               {post.description}
             </Typography>
             <Typography variant="subtitle1" color="primary">
-              Continue reading...
+              {/* <div onClick={() => navigate(`/${post.link}`)}> */}
+              <Button onClick={() => navegacao()}>Continue reading...</Button>
+              {/* </div> */}
             </Typography>
           </CardContent>
           <CardMedia

@@ -11,31 +11,25 @@ import FeaturedPost from './FeaturedPost'
 import Sidebar from './Sidebar'
 import Footer from './Footer'
 import TesteMunha from './TesteMunha'
-// import Main from './Main'
-// import post1 from './blog-post1.md'
-// import post2 from './blog-post2.md'
-// import post3 from './blog-post3.md'
+import ImgDieta from '../imgs/_38e1633d-7796-4a04-8e6b-dba58dc8b480.jpeg'
+import Treino from '../imgs/back.jpg'
+import Capa from '../imgs/capa.jpeg'
 
 const sections = [
-  { title: 'Dieta', url: '#' },
-  { title: 'Treino', url: '#' },
-  { title: 'Músicas', url: '#' },
-  { title: 'Projetos de tecnologia', url: '#' },
-  { title: 'Grupo de Danças', url: '#' },
-  // { title: 'Opinion', url: '#' },
-  // { title: 'Science', url: '#' },
-  // { title: 'Health', url: '#' },
-  // { title: 'Style', url: '#' },
-  // { title: 'Travel', url: '#' },
+  { title: 'Dieta', url: '/dieta' },
+  { title: 'Treino', url: '/treino' },
+  { title: 'Músicas', url: '/musicas' },
+  { title: 'Projetos de tecnologia', url: '/tech' },
+  { title: 'Grupo de Danças', url: '/danca' },
 ]
 
 const mainFeaturedPost = {
   title: 'Diário ou semanal',
   description:
     'Aqui tenho um diario de como está minha dieta e um poucos dos meus treinos',
-  image: 'https://source.unsplash.com/random?wallpapers',
+  image: Capa,
   imageText: 'main image description',
-  linkText: 'Continue reading…',
+  // linkText: 'Continue reading…',
 }
 
 const featuredPosts = [
@@ -43,19 +37,19 @@ const featuredPosts = [
     title: 'Dieta',
     date: 'Nov 12',
     description: 'Aqui pode-se calcular os macro nutrientes.',
-    image: 'https://source.unsplash.com/random?wallpapers',
+    image: ImgDieta,
     imageLabel: 'Image Text',
+    link: '/dieta',
   },
   {
     title: 'Treino',
     date: 'Nov 11',
     description: 'Aqui você poderá montar seus treinos.',
-    image: 'https://source.unsplash.com/random?wallpapers',
+    image: Treino,
     imageLabel: 'Image Text',
+    link: '/treino',
   },
 ]
-
-// const posts = [post1, post2, post3]
 
 const sidebar = {
   title: 'Sobre',
