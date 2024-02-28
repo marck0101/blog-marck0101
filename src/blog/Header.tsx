@@ -38,14 +38,10 @@ export default function Header(props: HeaderProps) {
       >
         {sections.map((section) => (
           <>
-            {/* @ts-ignore */}
             <Button
               color="inherit"
-              noWrap
               key={section.title}
-              // variant="body2"
               onClick={() => navigate(`${section.url}`)}
-              // href={section.url}
               sx={{ p: 1, flexShrink: 0 }}
             >
               {section.title}
