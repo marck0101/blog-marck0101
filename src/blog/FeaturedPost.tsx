@@ -20,7 +20,7 @@ interface FeaturedPostProps {
 
 export default function FeaturedPost(props: FeaturedPostProps) {
   const { post } = props
-  const url = window.location.href.split('/')[2]
+  // const url = window.location.href.split('/')[2]
   const navegacao1 = `${post.link}`
   const navigate = useNavigate()
 
