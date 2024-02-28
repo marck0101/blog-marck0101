@@ -20,14 +20,12 @@ interface FeaturedPostProps {
 
 export default function FeaturedPost(props: FeaturedPostProps) {
   const { post } = props
-
-  const navigate = useNavigate()
   const url = window.location.href.split('/')[2]
-  const navegacao = () => {
-    console.log('url', url)
-    console.log('${post.link}', `${url}${post.link}`)
+  const navegacao1 = `${post.link}`
+  const navigate = useNavigate()
 
-    navigate(`${post.link}`)
+  const navegacao = () => {
+    navigate(`${navegacao1}`)
   }
 
   return (

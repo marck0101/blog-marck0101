@@ -14,6 +14,7 @@ import Treino from '../../imgs/back.jpg'
 import FeaturedPost from '../../blog/FeaturedPost'
 import Footer from '../../blog/Footer'
 import Sidebar from '../../blog/Sidebar'
+import { useEffect } from 'react'
 
 const defaultTheme = createTheme()
 
@@ -75,6 +76,9 @@ const Dieta = () => {
       { name: 'Facebook', icon: FacebookIcon },
     ],
   }
+  useEffect(()=>{
+    console.log('iniciando a tela')
+  },[])
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -83,11 +87,11 @@ const Dieta = () => {
         <Header title="Blog marck0101" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
-          <Grid container spacing={4}>
+          {/* <Grid container spacing={4}>
             {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
             ))}
-          </Grid>
+          </Grid> */}
           <Grid container spacing={5} sx={{ mt: 3 }}>
             {/* <Main title="From the firehose" posts={posts} /> */}
             <Grid container xs={12} style={{ display: 'flex' }}>
