@@ -2,7 +2,6 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
 
-
 import Header from '../../blog/Header'
 import MainFeaturedPost from '../../blog/MainFeaturedPost'
 import Capa from '../../imgs/capa.jpeg'
@@ -14,6 +13,7 @@ const defaultTheme = createTheme()
 
 const Dieta = () => {
   const sections = [
+    { title: 'Home', url: '/' },
     { title: 'Dieta', url: '/dieta' },
     { title: 'Treino', url: '/treino' },
     { title: 'Músicas', url: '/musicas' },
@@ -49,7 +49,7 @@ const Dieta = () => {
           <Grid container spacing={5} sx={{ mt: 3 }}>
             {/* <Main title="From the firehose" posts={posts} /> */}
             <Grid container xs={12} style={{ display: 'flex' }}>
-              <Grid item xs={12}style={{ display: 'flex', marginLeft:40 }}>
+              <Grid item xs={12} style={{ display: 'flex', marginLeft: 40 }}>
                 {/* <div>Aqui vem o componente de montar a dieta</div> */}
                 <iframe
                   src={url}

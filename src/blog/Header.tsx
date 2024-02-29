@@ -28,7 +28,9 @@ export default function Header(props: HeaderProps) {
           noWrap
           sx={{ flex: 1 }}
         >
-          {title}
+          <div onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+            {title}
+          </div>
         </Typography>
       </Toolbar>
       <Toolbar

@@ -85,6 +85,7 @@ export default function Blog() {
       <CssBaseline />
       <Container maxWidth="lg">
         <Header title="Blog marck0101" sections={sections} />
+
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
