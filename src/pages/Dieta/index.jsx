@@ -1,19 +1,13 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 import Container from '@mui/material/Container'
-import GitHubIcon from '@mui/icons-material/GitHub'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import XIcon from '@mui/icons-material/X'
+
 
 import Header from '../../blog/Header'
 import MainFeaturedPost from '../../blog/MainFeaturedPost'
 import Capa from '../../imgs/capa.jpeg'
 import { Grid } from '@mui/material'
-import ImgDieta from '../../imgs/_38e1633d-7796-4a04-8e6b-dba58dc8b480.jpeg'
-import Treino from '../../imgs/back.jpg'
-import FeaturedPost from '../../blog/FeaturedPost'
-import Footer from '../../blog/Footer'
-import Sidebar from '../../blog/Sidebar'
+
 import { useEffect } from 'react'
 
 const defaultTheme = createTheme()
@@ -34,51 +28,11 @@ const Dieta = () => {
     imageText: 'main image description',
     linkText: 'Continue reading…',
   }
-  const featuredPosts = [
-    {
-      title: 'Dieta',
-      date: 'Nov 12',
-      description: 'Aqui pode-se calcular os macro nutrientes.',
-      image: ImgDieta,
-      imageLabel: 'Image Text',
-      link: '/dieta',
-    },
-    {
-      title: 'Treino',
-      date: 'Nov 11',
-      description: 'Aqui você poderá montar seus treinos.',
-      image: Treino,
-      imageLabel: 'Image Text',
-      link: '/treino',
-    },
-  ]
 
-  const sidebar = {
-    title: 'Sobre',
-    description:
-      'Aqui abaixo você encontra alguns projetos e informações sobre Tecnologia.',
-    archives: [
-      { title: 'March 2020', url: '#' },
-      { title: 'February 2020', url: '#' },
-      { title: 'January 2020', url: '#' },
-      { title: 'November 1999', url: '#' },
-      { title: 'October 1999', url: '#' },
-      { title: 'September 1999', url: '#' },
-      { title: 'August 1999', url: '#' },
-      { title: 'July 1999', url: '#' },
-      { title: 'June 1999', url: '#' },
-      { title: 'May 1999', url: '#' },
-      { title: 'April 1999', url: '#' },
-    ],
-    social: [
-      { name: 'GitHub', icon: GitHubIcon },
-      { name: 'X', icon: XIcon },
-      { name: 'Facebook', icon: FacebookIcon },
-    ],
-  }
-  useEffect(()=>{
+  const url = 'https://calculadora-calorias-seven.vercel.app'
+  useEffect(() => {
     console.log('iniciando a tela')
-  },[])
+  }, [])
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -95,29 +49,24 @@ const Dieta = () => {
           <Grid container spacing={5} sx={{ mt: 3 }}>
             {/* <Main title="From the firehose" posts={posts} /> */}
             <Grid container xs={12} style={{ display: 'flex' }}>
-              <Grid item xs={12}>
-                <div>Aqui vem o componente de montar a dieta</div>
-              </Grid>
-              <Grid
-                item
-                xs={3}
-                style={{ display: 'flex', flexDirection: 'row-reverse' }}
-              >
-                <Sidebar
-                  title={sidebar.title}
-                  description={sidebar.description}
-                  archives={sidebar.archives}
-                  social={sidebar.social}
+              <Grid item xs={12}style={{ display: 'flex', marginLeft:40 }}>
+                {/* <div>Aqui vem o componente de montar a dieta</div> */}
+                <iframe
+                  src={url}
+                  width="100%"
+                  height="1000px"
+                  title="Calculadora de calorias"
                 />
               </Grid>
+              {/* aqui vai um componente de calculadora de calorias */}
             </Grid>
           </Grid>
         </main>
       </Container>
-      <Footer
+      {/* <Footer
         title="Footer"
         description="Something here to give the footer a purpose!"
-      />
+      /> */}
     </ThemeProvider>
   )
 }
